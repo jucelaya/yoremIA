@@ -102,28 +102,74 @@ export const Step2CursoTema: React.FC<Step2Props> = ({ data, onChange, onNext, o
   // Sugerencias de temas rápidos para demostración instantánea
   const temasEjemplo: Record<string, string[]> = {
     matematica: [
-      'Resolvemos problemas aditivos de dos etapas con canje',
-      'Las fracciones en situaciones cotidianas de reparto',
-      'Multiplicación y división con estrategias de cálculo mental',
-      'Patrones numéricos y regularidades aditivas'
+      'Resolvemos problemas con números enteros y racionales en situaciones financieras',
+      'Las ecuaciones lineales y funciones afines en el modelado del presupuesto familiar',
+      'Calculamos áreas y volúmenes de prismas y pirámides en maquetas sostenibles',
+      'Analizamos medidas de tendencia central y dispersión en encuestas locales'
     ],
     comunicacion: [
-      'Leemos un texto instructivo para elaborar un juguete reciclado',
-      'Escribimos un afiche para promover el cuidado del agua en la escuela',
-      'Debatimos sobre la importancia del uso responsable de redes sociales',
-      'Leemos un cuento andino identificando hechos reales y fantásticos'
+      'Debatimos sobre la importancia del uso responsable y ético de redes sociales',
+      'Escribimos un ensayo argumentativo sobre la preservación de las lenguas originarias',
+      'Leemos críticamente artículos de divulgación científica identificando tesis y argumentos',
+      'Elaboramos un texto instructivo y afiche publicitario para el cuidado del agua'
     ],
     ciencia_tecnologia: [
-      'Indagamos sobre cómo influye la luz solar en el crecimiento de las plantas',
-      'Explicamos el funcionamiento del sistema respiratorio humano'
+      'Indagamos experimentalmente sobre cómo influye la luz y los nutrientes en el crecimiento vegetal',
+      'Explicamos la estructura del átomo y las propiedades periódicas de los elementos',
+      'Diseñamos y construimos un prototipo de filtro purificador de agua para zonas vulnerables',
+      'Explicamos la relación entre el ADN, la síntesis de proteínas y la transmisión de caracteres'
+    ],
+    ciencias_sociales: [
+      'Analizamos las fuentes históricas sobre el Tahuantinsuyo y el legado andino',
+      'Explicamos las causas económicas y sociales de la Independencia del Perú',
+      'Evaluamos el impacto del cambio climático en las cuencas hidrográficas de nuestra región',
+      'Formulamos un presupuesto familiar y analizamos las funciones de la SUNAT e INDECOPI'
+    ],
+    dpcc: [
+      'Reconocemos nuestras potencialidades y regulamos nuestras emociones ante la presión de grupo',
+      'Deliberamos sobre la no discriminación y el respeto a la diversidad cultural en la escuela',
+      'Analizamos dilemas morales cotidianos fundamentando nuestras decisiones en los derechos humanos',
+      'Diseñamos acuerdos de convivencia democrática y mecanismos de mediación pacífica de conflictos'
+    ],
+    educacion_trabajo: [
+      'Aplicamos la metodología Design Thinking para idear soluciones a necesidades de la comunidad',
+      'Diseñamos el modelo de negocios Lean Canvas para un emprendimiento ecológico escolar',
+      'Elaboramos el prototipo de un producto artesanal considerando costos y normas de bioseguridad',
+      'Calculamos el punto de equilibrio y formulamos un plan de comercialización en redes sociales'
+    ],
+    educacion_fisica: [
+      'Regulamos el esfuerzo motriz y monitoreamos la frecuencia cardíaca en pruebas aeróbicas',
+      'Creamos secuencias rítmicas y danzas tradicionales coordinando desplazamientos espaciales',
+      'Aplicamos estrategias tácticas de ataque y defensa en partidos de futsal y vóleibol',
+      'Diseñamos un plan de acondicionamiento físico personal y hábitos de alimentación balanceada'
+    ],
+    arte_cultura: [
+      'Apreciamos críticamente la iconografía y el simbolismo de la cerámica prehispánica peruana',
+      'Creamos un mural colectivo con materiales reciclados sobre la identidad y la memoria histórica',
+      'Experimentamos con técnicas de grabado y claroscuro para comunicar un mensaje socioambiental',
+      'Elaboramos un guion teatral corto y diseñamos la puesta en escena con cotidiáfonos'
+    ],
+    ingles: [
+      'Talking about daily routines and healthy habits using the simple present tense',
+      'Writing an informal email to an international pen pal about Peruvian traditions',
+      'Reading and discussing environmental challenges and eco-friendly solutions',
+      'Expressing opinions and making predictions about the future of technology'
+    ],
+    educacion_religiosa: [
+      'Acogemos el mensaje de las Bienaventuranzas como camino de solidaridad con el prójimo',
+      'Reflexionamos sobre el cuidado de la casa común a la luz de la encíclica Laudato Si\'',
+      'Fundamentamos la dignidad inalienable de toda persona humana creada a imagen de Dios',
+      'Promovemos el diálogo interreligioso, la reconciliación y una cultura de paz'
+    ],
+    castellano_segunda_lengua: [
+      'Nos comunicamos oralmente en situaciones escolares formales usando vocabulario ampliado',
+      'Leemos y comprendemos textos expositivos identificando la idea central y vocabulario nuevo',
+      'Redactamos cartas y descripciones estructuradas en párrafos con conectores de causa y efecto',
+      'Revisamos la concordancia gramatical y normas ortográficas básicas en nuestras redacciones'
     ],
     personal_social: [
       'Identificamos nuestras emociones y proponemos acuerdos para el buen trato',
       'Deliberamos sobre la gestión adecuada de residuos en la comunidad'
-    ],
-    ciencias_sociales: [
-      'Analizamos las fuentes históricas sobre el Imperio del Tahuantinsuyo',
-      'Explicamos las causas económicas y sociales de la Independencia del Perú'
     ]
   };
 

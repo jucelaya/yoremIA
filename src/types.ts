@@ -16,6 +16,7 @@ export interface CursoTemaData {
 
 export interface CompetenciasData {
   competenciaIds: string[];
+  competenciasTransversalesIds?: string[];
   sugeridaPorIA: boolean;
 }
 

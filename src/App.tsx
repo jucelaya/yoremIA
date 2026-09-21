@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { PlanificaFormData } from './types';
-import { cnebData, enfoquesTransversales, obtenerCurriculo } from './cnebData';
+import { cnebData, enfoquesTransversales, obtenerCurriculo, competenciasTransversales } from './cnebData';
 import { Header } from './components/Header';
 import { WizardSteps } from './components/WizardSteps';
 import { Step1Institucion } from './components/Step1Institucion';
@@ -32,6 +32,7 @@ const INITIAL_FORM_DATA: PlanificaFormData = {
   },
   competencias: {
     competenciaIds: ['resuelve_cantidad'],
+    competenciasTransversalesIds: [],
     sugeridaPorIA: false
   },
   enfoques: {
@@ -213,6 +214,19 @@ export function App() {
       };
     });
 
+    const competenciasTransversalesDetalladas = (formData.competencias.competenciasTransversalesIds || [])
+      .map((tId) => {
+        const trans = competenciasTransversales.find((c) => c.id === tId);
+        if (!trans) return null;
+        return {
+          nombre: trans.nombre,
+          capacidades: trans.capacidades,
+          estandar: trans.estandares[gradoObj.ciclo] || Object.values(trans.estandares)[0],
+          desempenos: trans.desempenos[formData.curso.gradoId] || trans.desempenos['1'] || []
+        };
+      })
+      .filter(Boolean);
+
     const enfoquesDetallados = formData.enfoques.enfoquesIds.map((eId) => {
       const enf = enfoquesTransversales.find((e) => e.id === eId);
       return {
@@ -243,6 +257,7 @@ export function App() {
       contextoDua: formData.institucion.contextoDua,
       adaptacionesNee: formData.evaluacion.adaptacionesNee,
       competencias: competenciasDetalladas,
+      competenciasTransversales: competenciasTransversalesDetalladas,
       enfoques: enfoquesDetallados,
       referencias: formData.enfoques.referencias,
       recursos: formData.enfoques.recursos,
