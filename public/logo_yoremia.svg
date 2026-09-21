@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="100%" height="100%">
+  <defs>
+    <!-- Gradiente azul profundo para libro base -->
+    <linearGradient id="gradBookNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="60%" stop-color="#075985" />
+      <stop offset="100%" stop-color="#0A3254" />
+    </linearGradient>
+
+    <!-- Gradiente verde azulado brillante para hojas/conocimiento -->
+    <linearGradient id="gradLeaves" x1="0%" y1="100%" x2="70%" y2="0%">
+      <stop offset="0%" stop-color="#0369A1" />
+      <stop offset="35%" stop-color="#0284C7" />
+      <stop offset="70%" stop-color="#00A896" />
+      <stop offset="100%" stop-color="#00C49F" />
+    </linearGradient>
+
+    <!-- Gradiente para el IA de YOREMIA -->
+    <linearGradient id="gradIA" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="40%" stop-color="#00A896" />
+      <stop offset="100%" stop-color="#00C49F" />
+    </linearGradient>
+
+    <!-- Gradiente para pixeles de IA -->
+    <linearGradient id="gradPixel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00B4D8" />
+      <stop offset="100%" stop-color="#00C49F" />
+    </linearGradient>
+  </defs>
+
+  <!-- ISOTIPO IZQUIERDO (x: 40 a 260, y: 30 a 250) -->
+  <g id="isotipo" transform="translate(15, 0)">
+    <!-- Birrete (Gorra de Graduado) -->
+    <!-- Rombo superior del birrete -->
+    <polygon points="155,72 205,88 155,104 105,88" fill="#0A3254" />
+    <polygon points="155,75 200,88 155,101 110,88" fill="#0284C7" />
+    <!-- Base curva del birrete -->
+    <path d="M 130,95 Q 155,108 180,95 L 180,103 Q 155,116 130,103 Z" fill="#0A3254" />
+    <!-- Botón central y borla del birrete -->
+    <circle cx="155" cy="88" r="2.5" fill="#0A3254" />
+    <path d="M 155,88 C 185,92 200,100 200,118" fill="none" stroke="#0A3254" stroke-width="2" stroke-linecap="round" />
+    <circle cx="200" cy="119" r="3.5" fill="#0A3254" />
+
+    <!-- Cabeza del estudiante -->
+    <circle cx="155" cy="126" r="17.5" fill="#0284C7" />
+
+    <!-- Cuello/Base del estudiante -->
+    <path d="M 142,145 C 146,141 164,141 168,145 C 165,152 145,152 142,145 Z" fill="#075985" />
+
+    <!-- Hojas centrales / Cuerpo del libro floreciente (Gradiente) -->
+    <!-- Hoja izquierda interna -->
+    <path d="M 155,208 C 153,180 135,142 98,124 C 95,145 110,188 155,208 Z" fill="url(#gradLeaves)" />
+    <!-- Hoja derecha interna -->
+    <path d="M 155,208 C 157,180 175,142 212,124 C 215,145 200,188 155,208 Z" fill="url(#gradLeaves)" />
+    <!-- Hoja central erguida izquierda -->
+    <path d="M 155,212 C 151,175 142,142 128,122 C 139,122 153,165 155,212 Z" fill="#0284C7" opacity="0.85" />
+    <!-- Hoja central erguida derecha -->
+    <path d="M 155,212 C 159,175 168,142 182,122 C 171,122 157,165 155,212 Z" fill="#00A896" opacity="0.85" />
+
+    <!-- Hojas externas abiertas verdes/teal -->
+    <path d="M 155,216 C 142,192 108,162 76,148 C 76,168 95,205 155,225 Z" fill="url(#gradLeaves)" />
+    <path d="M 155,216 C 168,192 202,162 234,148 C 234,168 215,205 155,225 Z" fill="url(#gradLeaves)" />
+
+    <!-- Cubiertas del libro exterior azul oscuro (base del libro) -->
+    <!-- Ala izquierda libro -->
+    <path d="M 152,228 C 105,212 65,190 56,170 L 56,190 C 65,210 105,232 152,246 Z" fill="url(#gradBookNavy)" />
+    <path d="M 56,170 L 56,190 L 72,190 L 72,170 Z" fill="#0284C7" />
+    <!-- Ala derecha libro -->
+    <path d="M 158,228 C 205,212 245,190 254,170 L 254,190 C 245,210 205,232 158,246 Z" fill="url(#gradBookNavy)" />
+
+    <!-- Base / Lomo central del libro -->
+    <path d="M 150,229 L 155,235 L 160,229 L 155,248 Z" fill="#0A3254" />
+
+    <!-- Bloques / Pixeles de IA flotantes hacia arriba a la derecha -->
+    <rect x="238" y="112" width="10" height="10" rx="2" fill="url(#gradPixel)" />
+    <rect x="252" y="96" width="12" height="12" rx="2" fill="url(#gradPixel)" />
+    <rect x="228" y="92" width="8" height="8" rx="1.5" fill="url(#gradPixel)" opacity="0.85" />
+    <rect x="248" y="76" width="11" height="11" rx="2" fill="url(#gradPixel)" />
+    <rect x="264" y="80" width="8" height="8" rx="1.5" fill="url(#gradPixel)" opacity="0.75" />
+  </g>
+
+  <!-- LOGOTIPO TIPOGRÁFICO DERECHA -->
+  <!-- "YOREM" en Azul Noche Intenso + "IA" en Gradiente VerdeAzulado -->
+  <g transform="translate(285, 142)">
+    <!-- YOREMIA Texto Principal -->
+    <text x="0" y="0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Montserrat, sans-serif" font-size="78" font-weight="900" letter-spacing="-1">
+      <tspan fill="#0C2340">YOREM</tspan><tspan fill="url(#gradIA)">IA</tspan>
+    </text>
+
+    <!-- Subtítulo: "Inteligencia educativa para docentes" -->
+    <text x="5" y="44" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Open Sans', sans-serif" font-size="22" font-weight="500" fill="#2C3E50" letter-spacing="0.2">
+      Inteligencia educativa para docentes
+    </text>
+
+    <!-- Línea divisoria y Autor: "—— Por Yovana María Remuzgo Velazco ——" -->
+    <g transform="translate(8, 72)">
+      <!-- Línea izquierda -->
+      <line x1="0" y1="-5" x2="38" y2="-5" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" />
+      
+      <!-- Texto Autor -->
+      <text x="48" y="0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="500" fill="#475569" letter-spacing="0.3">
+        Por Yovana María Remuzgo Velazco
+      </text>
+
+      <!-- Línea derecha -->
+      <line x1="334" y1="-5" x2="372" y2="-5" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" />
+    </g>
+  </g>
+</svg>

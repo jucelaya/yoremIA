@@ -1,0 +1,6 @@
+{
+  "name": "YOREMIA",
+  "description": "YOREMIA: Inteligencia educativa para docentes. Creado por Yovana María Remuzgo Velazco. Automatiza la generación de sesiones de aprendizaje oficiales CNEB (MINEDU) y su exportación a formato Word (.docx).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
