@@ -423,42 +423,42 @@ export function generateExactUserTemplateDocx() {
       <w:tr>
         <w:tc>
           <w:tcPr><w:tcW w:w="2500" w:type="dxa"/></w:tcPr>
-          <w:p><w:r><w:rPr><w:b/></w:rPr><w:t>Se desenvuelve en entornos virtuales generados por las TIC</w:t></w:r></w:p>
+          <w:p><w:r><w:rPr><w:b/></w:rPr><w:t>{{transversal_1_nombre}}</w:t></w:r></w:p>
           <w:p><w:r><w:rPr><w:b/></w:rPr><w:t>CAPACIDADES:</w:t></w:r></w:p>
-          <w:p><w:r><w:t>• Interactúa en entornos virtuales</w:t></w:r></w:p>
+          <w:p><w:r><w:t>{{transversal_1_capacidades}}</w:t></w:r></w:p>
         </w:tc>
         <w:tc>
           <w:tcPr><w:tcW w:w="2300" w:type="dxa"/></w:tcPr>
-          <w:p><w:r><w:t>Elabora material digital (presentaciones, videos, documentos, diseños, entre otros) comparando y seleccionando distintas actividades según sus necesidades, actitudes y valores.</w:t></w:r></w:p>
+          <w:p><w:r><w:t>{{transversal_1_estandar}}</w:t></w:r></w:p>
         </w:tc>
         <w:tc>
           <w:tcPr><w:tcW w:w="2300" w:type="dxa"/></w:tcPr>
-          <w:p><w:r><w:t>Modifica un entorno virtual personalizado cuando clasifica aplicaciones y herramientas de navegación, para utilizarlo según las necesidades, el contexto y las actividades en las que participa.</w:t></w:r></w:p>
+          <w:p><w:r><w:t>{{transversal_1_desempeno}}</w:t></w:r></w:p>
         </w:tc>
         <w:tc>
           <w:tcPr><w:tcW w:w="2300" w:type="dxa"/></w:tcPr>
-          <w:p><w:r><w:t>Cuando organiza sus carpetas y archivos con una lógica personal, configura las interfaces de las plataformas (como fondos, idiomas o accesos directos) y selecciona herramientas específicas que facilitan su flujo de trabajo.</w:t></w:r></w:p>
+          <w:p><w:r><w:t>{{transversal_1_evidencia}}</w:t></w:r></w:p>
         </w:tc>
       </w:tr>
 
       <w:tr>
         <w:tc>
           <w:tcPr><w:tcW w:w="2500" w:type="dxa"/></w:tcPr>
-          <w:p><w:r><w:rPr><w:b/></w:rPr><w:t>Gestiona su aprendizaje de manera autónoma</w:t></w:r></w:p>
+          <w:p><w:r><w:rPr><w:b/></w:rPr><w:t>{{transversal_2_nombre}}</w:t></w:r></w:p>
           <w:p><w:r><w:rPr><w:b/></w:rPr><w:t>CAPACIDADES:</w:t></w:r></w:p>
-          <w:p><w:r><w:t>• Monitorea y ajusta su desempeño durante el proceso de aprendizaje.</w:t></w:r></w:p>
+          <w:p><w:r><w:t>{{transversal_2_capacidades}}</w:t></w:r></w:p>
         </w:tc>
         <w:tc>
           <w:tcPr><w:tcW w:w="2300" w:type="dxa"/></w:tcPr>
-          <w:p><w:r><w:t>Comprende que debe organizarse lo más específicamente posible y que lo planteado incluya más de una estrategia y procedimientos que le permitan realizar la tarea, considerando su experiencia previa al respecto.</w:t></w:r></w:p>
+          <w:p><w:r><w:t>{{transversal_2_estandar}}</w:t></w:r></w:p>
         </w:tc>
         <w:tc>
           <w:tcPr><w:tcW w:w="2300" w:type="dxa"/></w:tcPr>
-          <w:p><w:r><w:t>Determina metas de aprendizaje viables, asociadas a sus necesidades, prioridades de aprendizaje y recursos disponibles, que le permitan lograr la tarea.</w:t></w:r></w:p>
+          <w:p><w:r><w:t>{{transversal_2_desempeno}}</w:t></w:r></w:p>
         </w:tc>
         <w:tc>
           <w:tcPr><w:tcW w:w="2300" w:type="dxa"/></w:tcPr>
-          <w:p><w:r><w:t>Se evidencia cuando el estudiante asume el control de su propio proceso de aprendizaje, reconociendo qué necesita aprender y qué dificultades enfrenta.</w:t></w:r></w:p>
+          <w:p><w:r><w:t>{{transversal_2_evidencia}}</w:t></w:r></w:p>
         </w:tc>
       </w:tr>
     </w:tbl>
@@ -559,7 +559,7 @@ export function generateExactUserTemplateDocx() {
         </w:tc>
         <w:tc>
           <w:tcPr><w:gridSpan w:val="2"/><w:tcW w:w="6300" w:type="dxa"/></w:tcPr>
-          <w:p><w:r><w:t>El trabajo entre pares se evidencia cuando los estudiantes interactúan de manera colaborativa para movilizar capacidades y resolver el reto propuesto de la sesión. Se manifiesta mediante el intercambio de estrategias, la confrontación de ideas y la retroalimentación mutua para alcanzar el propósito de aprendizaje de forma conjunta.</w:t></w:r></w:p>
+          <w:p><w:r><w:t>{{trabajo_entre_pares}}</w:t></w:r></w:p>
         </w:tc>
       </w:tr>
     </w:tbl>

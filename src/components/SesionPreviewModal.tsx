@@ -250,14 +250,25 @@ export const SesionPreviewModal: React.FC<PreviewModalProps> = ({
               </div>
             </div>
 
-            {/* DUA */}
-            <div className="border border-slate-200 rounded-2xl p-4 bg-white shadow-sm space-y-2">
-              <h4 className="font-bold text-slate-900 text-xs uppercase tracking-wider flex items-center gap-1.5">
-                <Sparkles className="w-4 h-4 text-pink-600" />
-                Estrategias DUA y Accesibilidad
-              </h4>
-              <div className="text-slate-700 text-xs leading-relaxed whitespace-pre-line bg-pink-50/30 p-3 rounded-xl border border-pink-100 max-h-48 overflow-y-auto">
-                {sesion.dua}
+            {/* DUA y Trabajo entre Pares */}
+            <div className="border border-slate-200 rounded-2xl p-4 bg-white shadow-sm space-y-3">
+              <div>
+                <h4 className="font-bold text-slate-900 text-xs uppercase tracking-wider flex items-center gap-1.5 mb-1.5">
+                  <Sparkles className="w-4 h-4 text-pink-600" />
+                  Estrategias DUA y Accesibilidad
+                </h4>
+                <div className="text-slate-700 text-xs leading-relaxed whitespace-pre-line bg-pink-50/30 p-2.5 rounded-xl border border-pink-100 max-h-32 overflow-y-auto">
+                  {sesion.dua}
+                </div>
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-900 text-xs uppercase tracking-wider flex items-center gap-1.5 mb-1.5">
+                  <Users className="w-4 h-4 text-indigo-600" />
+                  Trabajo entre Pares
+                </h4>
+                <p className="text-slate-700 text-xs leading-relaxed bg-indigo-50/40 p-2.5 rounded-xl border border-indigo-100">
+                  {sesion.trabajo_entre_pares || `Los estudiantes interactúan en parejas o equipos colaborativos para resolver las situaciones de ${formData.curso.tema}, contrastando sus procedimientos y brindándose retroalimentación mutua.`}
+                </p>
               </div>
             </div>
           </div>
