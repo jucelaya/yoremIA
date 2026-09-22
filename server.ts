@@ -123,6 +123,7 @@ ${competenciasTxt || payload.area}
             cierre: { type: Type.STRING },
             teoria: { type: Type.STRING },
             dua: { type: Type.STRING },
+            trabajo_entre_pares: { type: Type.STRING },
             consideraciones_diversidad: { type: Type.STRING },
             instrumento_contenido: { type: Type.STRING },
             ficha: { type: Type.STRING }
@@ -130,7 +131,7 @@ ${competenciasTxt || payload.area}
           required: [
             "proposito", "criterios", "evidencia_1", "reto", "situacion_significativa",
             "producto", "necesidades_aprendizaje", "inicio", "desarrollo", "cierre",
-            "teoria", "dua", "consideraciones_diversidad", "instrumento_contenido", "ficha"
+            "teoria", "dua", "trabajo_entre_pares", "consideraciones_diversidad", "instrumento_contenido", "ficha"
           ]
         }
       }
@@ -246,6 +247,7 @@ function generarSesionPedagogicaFallback(payload: any) {
     cierre: `3. Evaluación Formativa y Metacognición (15 min):\n- Los estudiantes reflexionan sobre su proceso de aprendizaje respondiendo:\n  * ¿Qué aprendimos hoy sobre ${tema}?\n  * ¿Qué dificultades encontramos y cómo logramos superarlas?\n  * ¿En qué situaciones cotidianas podemos aplicar lo aprendido?\n- Se aplica el instrumento formativo (${instrumento}) para verificar el logro de los criterios.\n- Felicitación al grupo por su compromiso y participación activa.`,
     teoria: `SÍNTESIS CONCEPTUAL - ${tema.toUpperCase()}\n\n1. Definición:\n${tema} constituye una noción fundamental del área de ${area}, que permite modelar, cuantificar o comunicar fenómenos del entorno escolar y comunitario.\n\n2. Elementos Principales:\n- Conceptos base y propiedades características.\n- Reglas y procedimientos operativos estandarizados.\n- Aplicación directa en la resolución de problemas cotidianos.\n\n3. Ejemplo Práctico Demostrativo:\nSe explica paso a paso la estrategia de resolución modelo para que los estudiantes la conserven en su cuaderno de trabajo como guía de consulta.`,
     dua: `Estrategias DUA Implementadas:\n- Múltiples formas de representación: Uso de material concreto, gráficos explicativos, organizadores visuales y textos claros.\n- Múltiples formas de acción y expresión: Opciones para responder en forma oral, gráfica o escrita; trabajo colaborativo con roles asignados.\n- Apoyos NEE: Tiempo adicional para la resolución, lectura asistida de consignas y refuerzo visual paso a paso.`,
+    trabajo_entre_pares: `El trabajo entre pares se evidencia cuando los estudiantes interactúan en parejas o equipos colaborativos para resolver las situaciones de ${tema}, contrastando sus procedimientos de resolución, confrontando hipótesis y brindándose retroalimentación mutua para alcanzar el propósito de aprendizaje.`,
     reto: `¿De qué manera podemos utilizar los conocimientos sobre ${tema} para resolver situaciones problemáticas y tomar decisiones informadas en nuestra vida diaria y comunitaria?`,
     situacion_significativa: `En la comunidad escolar, los estudiantes de ${grado} se enfrentan a desafíos diarios que requieren aplicar nociones de ${area}. A través del estudio de ${tema}, investigarán y construirán propuestas de solución argumentadas para compartirlas con sus compañeros.`,
     producto: `Ficha de aplicación práctica con resolución de problemas contextualizados sobre ${tema} y sustentación en equipo.`,
