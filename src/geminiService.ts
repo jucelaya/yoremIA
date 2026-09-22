@@ -48,6 +48,7 @@ export interface SesionGeneradaResponse {
   cierre: string;
   teoria: string;
   dua: string;
+  trabajo_entre_pares?: string;
   consideraciones_diversidad?: string;
   instrumento_contenido?: string;
   ficha?: string;

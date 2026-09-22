@@ -37,6 +37,7 @@ export interface SesionDocxData {
   enfoque_transversal_actitud_2?: string;
   consideraciones_diversidad?: string;
   dua: string;
+  trabajo_entre_pares?: string;
   inicio: string;
   desarrollo: string;
   cierre: string;
@@ -56,6 +57,16 @@ export interface SesionDocxData {
   teoria: string;
   instrumento_contenido?: string;
   ficha?: string;
+  transversal_1_nombre?: string;
+  transversal_1_capacidades?: string;
+  transversal_1_estandar?: string;
+  transversal_1_desempeno?: string;
+  transversal_1_evidencia?: string;
+  transversal_2_nombre?: string;
+  transversal_2_capacidades?: string;
+  transversal_2_estandar?: string;
+  transversal_2_desempeno?: string;
+  transversal_2_evidencia?: string;
   alumnos?: Array<{ numero: number; nombre: string }>;
 }
 
@@ -108,11 +119,13 @@ export async function ensamblarYDescargarDocx(
           'instrumento_nombre', 'instrumento',
           'enfoque_transversal_1', 'enfoque_transversal_valor_1', 'enfoque_transversal_actitud_1',
           'enfoque_transversal_2', 'enfoque_transversal_valor_2', 'enfoque_transversal_actitud_2',
-          'consideraciones_diversidad', 'dua', 'inicio', 'desarrollo', 'cierre',
+          'consideraciones_diversidad', 'dua', 'trabajo_entre_pares', 'inicio', 'desarrollo', 'cierre',
           'hay_adaptaciones', 'hay_adaptaciones_1', 'adaptaciones_1', 'adaptaciones_actividad_1',
           'hay_adaptaciones_2', 'adaptaciones_2', 'adaptaciones_actividad_2',
           'hay_adaptaciones_3', 'adaptaciones_3', 'adaptaciones_actividad_3',
-          'referencias', 'recursos', 'materiales', 'teoria', 'instrumento_contenido', 'ficha', 'alumnos'
+          'referencias', 'recursos', 'materiales', 'teoria', 'instrumento_contenido', 'ficha', 'alumnos',
+          'transversal_1_nombre', 'transversal_1_capacidades', 'transversal_1_estandar', 'transversal_1_desempeno', 'transversal_1_evidencia',
+          'transversal_2_nombre', 'transversal_2_capacidades', 'transversal_2_estandar', 'transversal_2_desempeno', 'transversal_2_evidencia'
         ];
 
         for (const key of paramKeys) {
@@ -182,6 +195,7 @@ export async function ensamblarYDescargarDocx(
       enfoque_transversal_actitud_2: data.enfoque_transversal_actitud_2 || 'Disposición a apoyar incondicionalmente a las personas en situaciones comprometidas o difíciles.',
       consideraciones_diversidad: data.consideraciones_diversidad || 'Atención personalizada, múltiples formas de representación y expresión, y evaluación formativa continua.',
       dua: data.dua || 'Se aplican estrategias del DUA: representación visual y andamiaje gradual.',
+      trabajo_entre_pares: data.trabajo_entre_pares || `El trabajo entre pares se evidencia cuando los estudiantes interactúan en equipos o parejas de manera colaborativa para movilizar capacidades y resolver el reto de la sesión (${data.tema || 'el aprendizaje propuesto'}), confrontando procedimientos y brindándose retroalimentación mutua.`,
       inicio: data.inicio || '',
       desarrollo: data.desarrollo || '',
       cierre: data.cierre || '',
@@ -203,6 +217,16 @@ export async function ensamblarYDescargarDocx(
       autor_yoremia: 'Por Yovana María Remuzgo Velazco',
       instrumento_contenido: limpiarTextoPedagogico(data.instrumento_contenido) || `LISTA DE COTEJO:\n- Criterio 1: Comprende el propósito y conceptos centrales.\n- Criterio 2: Aplica estrategias para resolver las actividades propuestas.\n- Criterio 3: Comunica sus conclusiones y reflexiona sobre su aprendizaje.`,
       ficha: limpiarTextoPedagogico(data.ficha) || `FICHA DE APLICACIÓN PRÁCTICA:\n1. Lee con atención la situación problemática y subraya los datos clave.\n2. Aplica los procedimientos aprendidos en clase para encontrar la respuesta.\n3. Explica con tus propias palabras el procedimiento que utilizaste.`,
+      transversal_1_nombre: data.transversal_1_nombre || 'Se desenvuelve en entornos virtuales generados por las TIC',
+      transversal_1_capacidades: data.transversal_1_capacidades || '• Personaliza entornos virtuales.\n• Gestiona información del entorno virtual.\n• Interactúa en entornos virtuales.\n• Crea objetos virtuales en diversos formatos.',
+      transversal_1_estandar: data.transversal_1_estandar || 'Se desenvuelve en los entornos virtuales cuando integra distintas actividades, actitudes y conocimientos de diversos contextos socioculturales en su entorno virtual personal.',
+      transversal_1_desempeno: data.transversal_1_desempeno || 'Navega en diversos entornos virtuales recomendados adaptando funcionalidades básicas de acuerdo con sus necesidades de aprendizaje.',
+      transversal_1_evidencia: data.transversal_1_evidencia || 'Organiza sus carpetas y materiales digitales utilizando herramientas virtuales de manera ética y segura.',
+      transversal_2_nombre: data.transversal_2_nombre || 'Gestiona su aprendizaje de manera autónoma',
+      transversal_2_capacidades: data.transversal_2_capacidades || '• Define metas de aprendizaje.\n• Organiza acciones estratégicas para alcanzar sus metas de aprendizaje.\n• Monitorea y ajusta su desempeño durante el proceso de aprendizaje.',
+      transversal_2_estandar: data.transversal_2_estandar || 'Gestiona su aprendizaje de manera autónoma al darse cuenta lo que debe aprender al distinguir lo sencillo o complejo de una tarea, y por ende define metas personales.',
+      transversal_2_desempeno: data.transversal_2_desempeno || 'Determina metas de aprendizaje viables asociadas a sus conocimientos, estilos de aprendizaje y recursos disponibles.',
+      transversal_2_evidencia: data.transversal_2_evidencia || 'Asume el control de su propio proceso de aprendizaje, reconociendo qué necesita aprender y qué dificultades enfrenta.',
       alumnos: data.alumnos && data.alumnos.length > 0
         ? data.alumnos
         : Array.from({ length: 15 }, (_, i) => ({

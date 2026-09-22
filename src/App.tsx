@@ -288,6 +288,14 @@ export function App() {
     const enf1 = enfoquesTransversales.find((e) => e.id === formData.enfoques.enfoquesIds[0]) || enfoquesTransversales[0];
     const enf2 = enfoquesTransversales.find((e) => e.id === formData.enfoques.enfoquesIds[1]) || enfoquesTransversales[5];
 
+    // Competencias transversales dinámicas graduadas al ciclo/grado
+    const trans1Def = competenciasTransversales[0];
+    const trans2Def = competenciasTransversales[1];
+    const trans1Estandar = trans1Def.estandares[gradoObj.ciclo] || Object.values(trans1Def.estandares)[0];
+    const trans1Desempeno = (trans1Def.desempenos[formData.curso.gradoId] || trans1Def.desempenos['1'] || [])[0] || 'Navega en entornos virtuales adaptando funcionalidades básicas según su necesidad.';
+    const trans2Estandar = trans2Def.estandares[gradoObj.ciclo] || Object.values(trans2Def.estandares)[0];
+    const trans2Desempeno = (trans2Def.desempenos[formData.curso.gradoId] || trans2Def.desempenos['1'] || [])[0] || 'Determina metas de aprendizaje viables asociadas a sus necesidades y recursos.';
+
     const rawAlumnos = formData.evaluacion.listaAlumnosRaw
       .split('\n')
       .map((l) => l.trim())
@@ -334,6 +342,7 @@ export function App() {
       enfoque_transversal_actitud_2: 'Disposición a apoyar incondicionalmente a las personas en situaciones comprometidas.',
       consideraciones_diversidad: (sesion as any).consideraciones_diversidad || 'Atención personalizada, múltiples formas de representación y expresión, y evaluación formativa continua.',
       dua: sesion.dua || formData.institucion.contextoDua,
+      trabajo_entre_pares: (sesion as any).trabajo_entre_pares || `El trabajo entre pares se evidencia cuando los estudiantes interactúan en parejas o equipos colaborativos para resolver las situaciones de ${formData.curso.tema}, contrastando sus procedimientos de resolución, confrontando hipótesis y brindándose retroalimentación mutua para alcanzar el propósito de aprendizaje.`,
       inicio: sesion.inicio,
       desarrollo: sesion.desarrollo,
       cierre: sesion.cierre,
@@ -347,6 +356,16 @@ export function App() {
       teoria: sesion.teoria,
       instrumento_contenido: (sesion as any).instrumento_contenido,
       ficha: (sesion as any).ficha,
+      transversal_1_nombre: trans1Def.nombre,
+      transversal_1_capacidades: trans1Def.capacidades.map((c) => `• ${c}`).join('\n'),
+      transversal_1_estandar: trans1Estandar,
+      transversal_1_desempeno: trans1Desempeno,
+      transversal_1_evidencia: 'Organiza sus carpetas y materiales digitales utilizando herramientas virtuales de manera ética y segura.',
+      transversal_2_nombre: trans2Def.nombre,
+      transversal_2_capacidades: trans2Def.capacidades.map((c) => `• ${c}`).join('\n'),
+      transversal_2_estandar: trans2Estandar,
+      transversal_2_desempeno: trans2Desempeno,
+      transversal_2_evidencia: 'Asume el control de su propio proceso de aprendizaje, reconociendo qué necesita aprender y qué dificultades enfrenta.',
       alumnos: alumnos
     };
   };
